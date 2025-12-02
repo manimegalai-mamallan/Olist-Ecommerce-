@@ -1,0 +1,326 @@
+[0m19:09:43.631273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123087E8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012308FC9590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001230961FED0>]}
+
+
+============================== 19:09:43.636328 | 36186f9d-4268-479b-93e4-6bcc92916484 ==============================
+[0m19:09:43.636328 [info ] [MainThread]: Running with dbt=1.10.15
+[0m19:09:43.637098 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'invocation_command': 'dbt run --select stg_* dim_* fact_sales', 'write_json': 'True', 'profiles_dir': 'C:\\Users\\manimegalai\\.dbt', 'printer_width': '80', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m19:09:43.641031 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'olist_postgres'
+[0m19:09:43.642408 [debug] [MainThread]: Command `dbt run` failed at 19:09:43.642255 after 0.15 seconds
+[0m19:09:43.642822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001230965A060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001230950BE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000123096C0270>]}
+[0m19:09:43.643232 [debug] [MainThread]: Flushing usage events
+[0m19:09:44.494773 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:43:07.047606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E3948590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E4109590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E4783ED0>]}
+
+
+============================== 19:43:07.057829 | 20d7b14a-710f-4c61-8d11-ed12137c33da ==============================
+[0m19:43:07.057829 [info ] [MainThread]: Running with dbt=1.10.15
+[0m19:43:07.059490 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'invocation_command': 'dbt run --select stg_* dim_* fact_sales', 'log_format': 'default', 'cache_selected_only': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m19:43:07.631579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '20d7b14a-710f-4c61-8d11-ed12137c33da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E3AF1810>]}
+[0m19:43:07.696164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '20d7b14a-710f-4c61-8d11-ed12137c33da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E4828C00>]}
+[0m19:43:07.697918 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:43:08.262832 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m19:43:08.264153 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:43:08.264716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '20d7b14a-710f-4c61-8d11-ed12137c33da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E58EC850>]}
+[0m19:43:10.843988 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.olist_dw.stg_customers' (models\stg\stg_customers.sql) depends on a source named 'olist.customers' which was not found
+[0m19:43:10.845264 [debug] [MainThread]: Command `dbt run` failed at 19:43:10.845097 after 3.96 seconds
+[0m19:43:10.845738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E5D04C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E5D05310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198E468BE70>]}
+[0m19:43:10.846173 [debug] [MainThread]: Flushing usage events
+[0m19:43:11.609442 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:43:42.553025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4EA858590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4EB01D590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4EB693ED0>]}
+
+
+============================== 19:43:42.557943 | 3a82f811-c660-4e71-b2ec-ae738e6043e9 ==============================
+[0m19:43:42.557943 [info ] [MainThread]: Running with dbt=1.10.15
+[0m19:43:42.558711 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'use_colors': 'True', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'write_json': 'True', 'log_format': 'default', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --select stg_* dim_* fact_sales', 'printer_width': '80', 'target_path': 'None'}
+[0m19:43:42.745439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3a82f811-c660-4e71-b2ec-ae738e6043e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4EAA01810>]}
+[0m19:43:42.808910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3a82f811-c660-4e71-b2ec-ae738e6043e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4EB734C00>]}
+[0m19:43:42.810431 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:43:43.092067 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m19:43:43.093156 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:43:43.093854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3a82f811-c660-4e71-b2ec-ae738e6043e9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4EC81C850>]}
+[0m19:43:44.217341 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.olist_dw.stg_customers' (models\stg\stg_customers.sql) depends on a source named 'ecommerce.customers' which was not found
+[0m19:43:44.218567 [debug] [MainThread]: Command `dbt run` failed at 19:43:44.218431 after 1.82 seconds
+[0m19:43:44.218932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4ECC20C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4ECC21220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4EB59FE70>]}
+[0m19:43:44.219337 [debug] [MainThread]: Flushing usage events
+[0m19:43:45.009699 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:45:09.387314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025649FC8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564A7A9590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564AE03ED0>]}
+
+
+============================== 19:45:09.393052 | 26418ee3-c318-4869-a5e4-fb230530d7fb ==============================
+[0m19:45:09.393052 [info ] [MainThread]: Running with dbt=1.10.15
+[0m19:45:09.394073 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'printer_width': '80', 'invocation_command': 'dbt run --select stg_* dim_* fact_sales', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m19:45:09.615482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '26418ee3-c318-4869-a5e4-fb230530d7fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564A171810>]}
+[0m19:45:09.693380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '26418ee3-c318-4869-a5e4-fb230530d7fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564AEA4C00>]}
+[0m19:45:09.695085 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:45:10.003521 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m19:45:10.004709 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:45:10.005306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '26418ee3-c318-4869-a5e4-fb230530d7fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564BF6C850>]}
+[0m19:45:11.318247 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.olist_dw.stg_customers' (models\stg\stg_customers.sql) depends on a source named 'ecommerce.customers' which was not found
+[0m19:45:11.319393 [debug] [MainThread]: Command `dbt run` failed at 19:45:11.319256 after 2.09 seconds
+[0m19:45:11.319800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564C3F0C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564C3F1220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002564AD0BE70>]}
+[0m19:45:11.320256 [debug] [MainThread]: Flushing usage events
+[0m19:45:12.190979 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:47:21.774737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000B5E8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000BDC9590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000C423ED0>]}
+
+
+============================== 19:47:21.779977 | 84012ac9-022b-417d-b303-efab41122e4e ==============================
+[0m19:47:21.779977 [info ] [MainThread]: Running with dbt=1.10.15
+[0m19:47:21.780760 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'no_print': 'None', 'log_format': 'default', 'cache_selected_only': 'False', 'use_colors': 'True', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'invocation_command': 'dbt run --select stg_* dim_* fact_sales', 'printer_width': '80', 'target_path': 'None'}
+[0m19:47:21.971281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84012ac9-022b-417d-b303-efab41122e4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000B791810>]}
+[0m19:47:22.037274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84012ac9-022b-417d-b303-efab41122e4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000C4C8C00>]}
+[0m19:47:22.038865 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:47:22.310697 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m19:47:22.311879 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:47:22.312508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '84012ac9-022b-417d-b303-efab41122e4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000D58C850>]}
+[0m19:47:23.425466 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.ecommerce.stg_customers' (models\stg\stg_customers.sql) depends on a source named 'ecommerce.customers' which was not found
+[0m19:47:23.426903 [debug] [MainThread]: Command `dbt run` failed at 19:47:23.426740 after 1.81 seconds
+[0m19:47:23.427328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000D9F4C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000D9F5220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002000C32FE70>]}
+[0m19:47:23.427779 [debug] [MainThread]: Flushing usage events
+[0m19:47:24.127986 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:50:48.812920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFA76F8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFA7EBD590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFA8533ED0>]}
+
+
+============================== 19:50:48.817722 | 41a0a5c6-bea2-49a5-840e-11f9321fe3f0 ==============================
+[0m19:50:48.817722 [info ] [MainThread]: Running with dbt=1.10.15
+[0m19:50:48.818451 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt run --select stg_* dim_* fact_sales', 'no_print': 'None', 'write_json': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m19:50:48.821473 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Could not find profile named 'olist_dw'
+[0m19:50:48.823447 [debug] [MainThread]: Command `dbt run` failed at 19:50:48.823286 after 0.16 seconds
+[0m19:50:48.823853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFA856E060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFA841BE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DFA85D8270>]}
+[0m19:50:48.824242 [debug] [MainThread]: Flushing usage events
+[0m19:50:49.602933 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:51:30.043681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002021EC68590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002021F42D590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002021FAA3ED0>]}
+
+
+============================== 19:51:30.048589 | 07a2354b-8dc4-4705-a993-2503ab1e5600 ==============================
+[0m19:51:30.048589 [info ] [MainThread]: Running with dbt=1.10.15
+[0m19:51:30.049327 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'log_format': 'default', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select stg_* dim_* fact_sales', 'write_json': 'True', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'printer_width': '80', 'target_path': 'None'}
+[0m19:51:30.233485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '07a2354b-8dc4-4705-a993-2503ab1e5600', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002021EE11810>]}
+[0m19:51:30.296597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '07a2354b-8dc4-4705-a993-2503ab1e5600', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002021FB45590>]}
+[0m19:51:30.298112 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m19:51:30.570365 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m19:51:30.571408 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:51:30.572103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '07a2354b-8dc4-4705-a993-2503ab1e5600', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020220C1C950>]}
+[0m19:51:31.700570 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.ecommerce.stg_customers' (models\stg\stg_customers.sql) depends on a source named 'ecommerce.customers' which was not found
+[0m19:51:31.701839 [debug] [MainThread]: Command `dbt run` failed at 19:51:31.701710 after 1.80 seconds
+[0m19:51:31.702211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020221024C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020221025220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002021F9AFE70>]}
+[0m19:51:31.702580 [debug] [MainThread]: Flushing usage events
+[0m19:51:32.426336 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:03:59.773010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EF0C28590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EF1409590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EF1A67ED0>]}
+
+
+============================== 20:03:59.781463 | 19ed5260-a549-4366-8e22-7e08cfe6297a ==============================
+[0m20:03:59.781463 [info ] [MainThread]: Running with dbt=1.10.15
+[0m20:03:59.782309 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'no_print': 'None', 'use_colors': 'True', 'target_path': 'None', 'log_format': 'default', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m20:03:59.834866 [info ] [MainThread]: dbt version: 1.10.15
+[0m20:03:59.835570 [info ] [MainThread]: python version: 3.13.1
+[0m20:03:59.836089 [info ] [MainThread]: python path: C:\Users\manimegalai\Desktop\Ecommerce\dbt\.venv\Scripts\python.exe
+[0m20:03:59.836556 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m20:03:59.935077 [info ] [MainThread]: Using profiles dir at C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse
+[0m20:03:59.935936 [info ] [MainThread]: Using profiles.yml file at C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\profiles.yml
+[0m20:03:59.936466 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\dbt_project.yml
+[0m20:03:59.938091 [info ] [MainThread]: adapter type: postgres
+[0m20:03:59.938693 [info ] [MainThread]: adapter version: 1.9.1
+[0m20:04:00.045909 [info ] [MainThread]: Configuration:
+[0m20:04:00.046549 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:04:00.048129 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:04:00.048652 [info ] [MainThread]: Required dependencies:
+[0m20:04:00.049177 [debug] [MainThread]: Executing "git --help"
+[0m20:04:00.060249 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:04:00.060903 [info ] [MainThread]: Connection:
+[0m20:04:00.061481 [info ] [MainThread]:   host: localhost
+[0m20:04:00.061980 [info ] [MainThread]:   port: 5432
+[0m20:04:00.062462 [info ] [MainThread]:   user: postgres
+[0m20:04:00.062953 [info ] [MainThread]:   database: ecommerce
+[0m20:04:00.063431 [info ] [MainThread]:   schema: dw
+[0m20:04:00.063910 [info ] [MainThread]:   connect_timeout: 10
+[0m20:04:00.064392 [info ] [MainThread]:   role: None
+[0m20:04:00.064873 [info ] [MainThread]:   search_path: None
+[0m20:04:00.065354 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:04:00.065963 [info ] [MainThread]:   sslmode: prefer
+[0m20:04:00.066572 [info ] [MainThread]:   sslcert: None
+[0m20:04:00.067071 [info ] [MainThread]:   sslkey: None
+[0m20:04:00.067622 [info ] [MainThread]:   sslrootcert: None
+[0m20:04:00.068218 [info ] [MainThread]:   application_name: dbt
+[0m20:04:00.068780 [info ] [MainThread]:   retries: 1
+[0m20:04:00.069656 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m20:04:00.437143 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:04:03.744626 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:04:03.745036 [debug] [MainThread]: On debug: select 1 as id
+[0m20:04:03.745311 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:04:03.862755 [debug] [MainThread]: SQL status: SELECT 1 in 0.117 seconds
+[0m20:04:03.863836 [debug] [MainThread]: On debug: Close
+[0m20:04:03.864321 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:04:03.865007 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:04:03.865542 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:04:03.867376 [debug] [MainThread]: Command `dbt debug` failed at 20:04:03.867061 after 4.27 seconds
+[0m20:04:03.868125 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:04:03.869528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EF2CDFBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EF2D5A690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EF1B0B680>]}
+[0m20:04:03.870659 [debug] [MainThread]: Flushing usage events
+[0m20:04:04.636467 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:06:05.817917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA464C8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA46CA9590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA47303ED0>]}
+
+
+============================== 20:06:05.823090 | a6593779-f0f3-4062-8fe3-6e542398877a ==============================
+[0m20:06:05.823090 [info ] [MainThread]: Running with dbt=1.10.15
+[0m20:06:05.824321 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'use_colors': 'True', 'no_print': 'None', 'warn_error': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'log_cache_events': 'False', 'debug': 'False', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'invocation_command': 'dbt run --select stg_*', 'printer_width': '80', 'write_json': 'True'}
+[0m20:06:06.070100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6593779-f0f3-4062-8fe3-6e542398877a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA46671810>]}
+[0m20:06:06.136007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a6593779-f0f3-4062-8fe3-6e542398877a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA473A4C00>]}
+[0m20:06:06.137389 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m20:06:06.433372 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m20:06:06.434424 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:06:06.434990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a6593779-f0f3-4062-8fe3-6e542398877a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA4847C850>]}
+[0m20:06:07.871737 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_dw.fact
+[0m20:06:07.884300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a6593779-f0f3-4062-8fe3-6e542398877a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA4883F890>]}
+[0m20:06:07.981658 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\manifest.json
+[0m20:06:08.037131 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\semantic_manifest.json
+[0m20:06:08.079028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a6593779-f0f3-4062-8fe3-6e542398877a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA48BD4AD0>]}
+[0m20:06:08.079530 [info ] [MainThread]: Found 15 models, 4 data tests, 8 sources, 459 macros
+[0m20:06:08.080152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6593779-f0f3-4062-8fe3-6e542398877a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA48CA0870>]}
+[0m20:06:08.081111 [warn ] [MainThread]: The selection criterion 'stg_*' does not match any enabled nodes
+[0m20:06:08.082884 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:06:08.083999 [debug] [MainThread]: Command end result
+[0m20:06:08.109173 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\manifest.json
+[0m20:06:08.111417 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\semantic_manifest.json
+[0m20:06:08.114761 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\run_results.json
+[0m20:06:08.116626 [debug] [MainThread]: Command `dbt run` succeeded at 20:06:08.116280 after 2.44 seconds
+[0m20:06:08.117051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA47152150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA48C56D00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AA48C56E60>]}
+[0m20:06:08.117490 [debug] [MainThread]: Flushing usage events
+[0m20:06:08.901693 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:30:26.224289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49DC28590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49E409590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49EA63ED0>]}
+
+
+============================== 20:30:26.235491 | 05c6a631-40b8-4633-87eb-eb58ca804dec ==============================
+[0m20:30:26.235491 [info ] [MainThread]: Running with dbt=1.10.15
+[0m20:30:26.236425 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'invocation_command': 'dbt ls --resource-type model', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m20:30:26.779207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '05c6a631-40b8-4633-87eb-eb58ca804dec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49DDD1810>]}
+[0m20:30:26.852415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '05c6a631-40b8-4633-87eb-eb58ca804dec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49EB04E20>]}
+[0m20:30:26.853993 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m20:30:27.407580 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m20:30:28.247208 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:30:28.247827 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:30:28.254292 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.olist_dw.fact
+[0m20:30:28.306214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '05c6a631-40b8-4633-87eb-eb58ca804dec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49FBCC550>]}
+[0m20:30:28.403465 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\manifest.json
+[0m20:30:28.411912 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\semantic_manifest.json
+[0m20:30:28.469794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '05c6a631-40b8-4633-87eb-eb58ca804dec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49FBB3F20>]}
+[0m20:30:28.470636 [info ] [MainThread]: Found 15 models, 4 data tests, 8 sources, 459 macros
+[0m20:30:28.471217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '05c6a631-40b8-4633-87eb-eb58ca804dec', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49E96F150>]}
+[0m20:30:28.473508 [info ] [MainThread]: olist_dw.dim.dim_customer
+[0m20:30:28.474249 [info ] [MainThread]: olist_dw.dim.dim_date
+[0m20:30:28.475403 [info ] [MainThread]: olist_dw.dim.dim_product
+[0m20:30:28.476411 [info ] [MainThread]: olist_dw.dim.dim_seller
+[0m20:30:28.477817 [info ] [MainThread]: olist_dw.facts.fact_sales
+[0m20:30:28.478247 [info ] [MainThread]: olist_dw.example.my_first_dbt_model
+[0m20:30:28.478672 [info ] [MainThread]: olist_dw.example.my_second_dbt_model
+[0m20:30:28.479102 [info ] [MainThread]: olist_dw.stg.stg_customers
+[0m20:30:28.479670 [info ] [MainThread]: olist_dw.stg.stg_order_items
+[0m20:30:28.480532 [info ] [MainThread]: olist_dw.stg.stg_order_payments
+[0m20:30:28.481252 [info ] [MainThread]: olist_dw.stg.stg_order_reviews
+[0m20:30:28.481738 [info ] [MainThread]: olist_dw.stg.stg_orders
+[0m20:30:28.482252 [info ] [MainThread]: olist_dw.stg.stg_product_categories
+[0m20:30:28.482766 [info ] [MainThread]: olist_dw.stg.stg_products
+[0m20:30:28.483366 [info ] [MainThread]: olist_dw.stg.stg_sellers
+[0m20:30:28.485341 [debug] [MainThread]: Command `dbt ls` succeeded at 20:30:28.485073 after 2.45 seconds
+[0m20:30:28.485969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A010F450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B49E8B2150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B4A00DC710>]}
+[0m20:30:28.486400 [debug] [MainThread]: Flushing usage events
+[0m20:30:29.451619 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:36:48.874042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE5F768590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE5FF49590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE605A7ED0>]}
+
+
+============================== 20:36:48.879355 | f044e70c-24ca-445d-874d-36e13b39ae9a ==============================
+[0m20:36:48.879355 [info ] [MainThread]: Running with dbt=1.10.15
+[0m20:36:48.880136 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'log_format': 'default', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'use_colors': 'True', 'printer_width': '80', 'write_json': 'True'}
+[0m20:36:48.910266 [info ] [MainThread]: dbt version: 1.10.15
+[0m20:36:48.910949 [info ] [MainThread]: python version: 3.13.1
+[0m20:36:48.911509 [info ] [MainThread]: python path: C:\Users\manimegalai\Desktop\Ecommerce\dbt\.venv\Scripts\python.exe
+[0m20:36:48.912028 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m20:36:48.980779 [info ] [MainThread]: Using profiles dir at C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse
+[0m20:36:48.981506 [info ] [MainThread]: Using profiles.yml file at C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\profiles.yml
+[0m20:36:48.982120 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\dbt_project.yml
+[0m20:36:48.985519 [info ] [MainThread]: adapter type: postgres
+[0m20:36:48.987073 [info ] [MainThread]: adapter version: 1.9.1
+[0m20:36:49.106397 [info ] [MainThread]: Configuration:
+[0m20:36:49.107097 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:36:49.107638 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:36:49.108186 [info ] [MainThread]: Required dependencies:
+[0m20:36:49.108731 [debug] [MainThread]: Executing "git --help"
+[0m20:36:49.119732 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:36:49.121367 [info ] [MainThread]: Connection:
+[0m20:36:49.122422 [info ] [MainThread]:   host: localhost
+[0m20:36:49.123621 [info ] [MainThread]:   port: 5432
+[0m20:36:49.124202 [info ] [MainThread]:   user: postgres
+[0m20:36:49.124700 [info ] [MainThread]:   database: ecommerce
+[0m20:36:49.125227 [info ] [MainThread]:   schema: dw
+[0m20:36:49.125716 [info ] [MainThread]:   connect_timeout: 10
+[0m20:36:49.126213 [info ] [MainThread]:   role: None
+[0m20:36:49.126730 [info ] [MainThread]:   search_path: None
+[0m20:36:49.127227 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:36:49.127846 [info ] [MainThread]:   sslmode: prefer
+[0m20:36:49.128372 [info ] [MainThread]:   sslcert: None
+[0m20:36:49.128874 [info ] [MainThread]:   sslkey: None
+[0m20:36:49.129436 [info ] [MainThread]:   sslrootcert: None
+[0m20:36:49.129935 [info ] [MainThread]:   application_name: dbt
+[0m20:36:49.130436 [info ] [MainThread]:   retries: 1
+[0m20:36:49.131135 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m20:36:49.456532 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:36:50.629800 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:36:50.630237 [debug] [MainThread]: On debug: select 1 as id
+[0m20:36:50.630543 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:36:50.910414 [debug] [MainThread]: SQL status: SELECT 1 in 0.280 seconds
+[0m20:36:50.911567 [debug] [MainThread]: On debug: Close
+[0m20:36:50.912019 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:36:50.912604 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:36:50.913205 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m20:36:50.914422 [debug] [MainThread]: Command `dbt debug` failed at 20:36:50.914195 after 2.21 seconds
+[0m20:36:50.914855 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:36:50.915700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE6181FBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE618A6690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EE6064B680>]}
+[0m20:36:50.917804 [debug] [MainThread]: Flushing usage events
+[0m20:36:51.748475 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:37:10.042338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D868A8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D87089590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D876E3ED0>]}
+
+
+============================== 20:37:10.047229 | 61e869de-1d8f-4472-961e-972b1b977f5c ==============================
+[0m20:37:10.047229 [info ] [MainThread]: Running with dbt=1.10.15
+[0m20:37:10.047985 [debug] [MainThread]: running dbt with arguments {'profiles_dir': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse', 'printer_width': '80', 'target_path': 'None', 'use_colors': 'True', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'C:\\Users\\manimegalai\\Desktop\\Ecommerce\\dbt\\ecommerce_datawarehouse\\logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt ls -s stg_*', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m20:37:10.238860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '61e869de-1d8f-4472-961e-972b1b977f5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D86A35810>]}
+[0m20:37:10.306232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '61e869de-1d8f-4472-961e-972b1b977f5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D87784E20>]}
+[0m20:37:10.308146 [info ] [MainThread]: Registered adapter: postgres=1.9.1
+[0m20:37:10.609410 [debug] [MainThread]: checksum: 14a228079bd6df63ba81633f9a3cf44ecfaa31056ac397c602753ec895dbf885, vars: {}, profile: , target: , version: 1.10.15
+[0m20:37:10.730828 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m20:37:10.731647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '61e869de-1d8f-4472-961e-972b1b977f5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D888CFC50>]}
+[0m20:37:12.142635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '61e869de-1d8f-4472-961e-972b1b977f5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D888A72F0>]}
+[0m20:37:12.225416 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\manifest.json
+[0m20:37:12.228154 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\manimegalai\Desktop\Ecommerce\dbt\ecommerce_datawarehouse\target\semantic_manifest.json
+[0m20:37:12.261069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '61e869de-1d8f-4472-961e-972b1b977f5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D88A5CBB0>]}
+[0m20:37:12.261616 [info ] [MainThread]: Found 15 models, 4 data tests, 8 sources, 459 macros
+[0m20:37:12.262295 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '61e869de-1d8f-4472-961e-972b1b977f5c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D88C98EF0>]}
+[0m20:37:12.263226 [warn ] [MainThread]: The selection criterion 'stg_*' does not match any enabled nodes
+[0m20:37:12.263861 [warn ] [MainThread]: No nodes selected!
+[0m20:37:12.265030 [debug] [MainThread]: Command `dbt ls` succeeded at 20:37:12.264841 after 2.37 seconds
+[0m20:37:12.265549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D87532150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D891205D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029D89120680>]}
+[0m20:37:12.266539 [debug] [MainThread]: Flushing usage events
+[0m20:37:12.886690 [debug] [MainThread]: An error was encountered while trying to flush usage events
