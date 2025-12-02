@@ -1,0 +1,14 @@
+olist_dw:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: Random2397!
+      port: 5432
+      dbname: ecommerce
+      schema: dw           # dbt will create models in schema "dw"
+      threads: 4
+      keepalives_idle: 0
+      sslmode: prefer
