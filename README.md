@@ -1,25 +1,38 @@
-Olist E-Commerce Dashboard (OLTP & OLAP Integration)
-1. Project Overview
-This project shows an end-to-end analytics dashboard for the Olist Brazilian E-Commerce dataset, integrating OLTP and OLAP schemas using PostgreSQL and visualizing insights along a Streamlit web application. The system is containerized using Docker to make sure portability and reproducibility.
-The dashboard authorizes users to investigate business metrics such as orders, customers, products, revenue, delivery performance, and category level insights through interactive filters.
-________________________________________
-2. Technology Stack
-•	Database: PostgreSQL 15
-•	Visualization: Streamlit
-•	Backend Libraries are Python, Pandas, psycopg2
-•	Containerization: Docker & Docker Compose
-•	Deployment Environment: Local Docker setup
-________________________________________
-3. Project Structure
+# Olist E-Commerce Dashboard  
+**(OLTP & OLAP Integration)**
+
+---
+
+## 1. Project Overview
+
+This project presents an end-to-end analytics dashboard built on the Olist Brazilian E-Commerce dataset. The solution integrates OLTP and OLAP schemas using PostgreSQL and visualizes business insights through a Streamlit web application. The entire system is containerized using Docker, ensuring portability and reproducibility across environments.
+
+The dashboard enables users to explore key business metrics such as orders, customers, products, revenue, delivery performance, and category-level insights using interactive filters.
+
+---
+
+## 2. Technology Stack
+
+- **Database:** PostgreSQL 15  
+- **Visualization:** Streamlit  
+- **Backend Libraries:** Python, Pandas, psycopg2  
+- **Containerization:** Docker, Docker Compose  
+- **Deployment Environment:** Local Docker setup  
+
+---
+
+## 3. Project Structure
+
+```text
 Phase3/
 ├── docker-compose.yml
 └── app/
     ├── Dockerfile
     ├── requirements.txt
-    ├── app.py                  # Main Streamlit application entry point
-    ├── ingest.py               # Data ingestion script (CSV → PostgreSQL staging)
+    ├── app.py
+    ├── ingest.py
     │
-    ├── dataset/                # Raw Olist datasets
+    ├── dataset/
     │   ├── olist_customers_dataset.csv
     │   ├── olist_geolocation_dataset.csv
     │   ├── olist_order_items_dataset.csv
@@ -30,10 +43,9 @@ Phase3/
     │   ├── olist_sellers_dataset.csv
     │   └── product_category_name_translation.csv
     │
-    ├── models/                 # Database schema and warehouse logic
-    │   ├── run_all.sql         # Master script to build staging, dimensions, and facts
-    │   │
-    │   ├── stg/                # Staging layer SQL scripts
+    ├── models/
+    │   ├── run_all.sql
+    │   ├── stg/
     │   │   ├── stg_customers.sql
     │   │   ├── stg_geolocation.sql
     │   │   ├── stg_order_items.sql
@@ -43,73 +55,66 @@ Phase3/
     │   │   ├── stg_product_categories.sql
     │   │   ├── stg_products.sql
     │   │   └── stg_sellers.sql
-    │   │
-    │   ├── dim/                # Dimension tables
+    │   ├── dim/
     │   │   ├── dim_customer.sql
     │   │   ├── dim_date.sql
     │   │   ├── dim_product.sql
     │   │   └── dim_seller.sql
-    │   │
-    │   └── fact/               # Fact tables
+    │   └── fact/
     │       └── fact_sales.sql
     │
-    └── pages/                  # Streamlit multipage dashboards
+    └── pages/
         └── 2_Delivery_SLA_Dashboard.py
 
-________________________________________
-4. Setup Instructions
-Step 1: It is the Install Prerequisites
+```
+---
+## 4. Setup Instructions
+### Step 1: It is the Install Prerequisites
 Verify the listed below are installed on your system:
-•	Docker Desktop
-•	Docker Compose
-•	Python 3.9+ (for local testing, optional)
-________________________________________
-Step 2: Start Database Services
+-	Docker Desktop
+-	Docker Compose
+-	Python 3.9+ (for local testing, optional)
+---
+### Step 2: Start Database Services
 From the project root directory, run:
 docker compose up -d
 This will:
-•	PostgreSQL on port 5432
-•	Initializing OLTP and OLAP schemas
-•	Persist data using Docker volumes
-________________________________________
-Step 3: Verify Database
+-	PostgreSQL on port 5432
+-	Initializing OLTP and OLAP schemas
+  	Persist data using Docker volumes
+---
+### Step 3: Verify Database
 Open Adminer in a browser:
 http://localhost:8080
 Login credentials:
-•	System: PostgreSQL
-•	Server: postgres
-•	Username: postgres
-•	Password: postgres
-•	Database: ecommerce
+-	System: PostgreSQL
+-	Server: postgres
+-	Username: postgres
+-	Password: Random2397!
+-	Database: ecommerce
 Confirm that both OLTP and OLAP schemas exist.
-________________________________________
-
-5. Running the Streamlit Dashboard
-Step 1 is Install Dependencies
-pip install -r requirements.txt
-Step 2 is Launch the Application
-streamlit run app.py
-Step 3: Access Dashboard
+---
+## 5. Running the Streamlit Dashboard
+### Step 1 is Run docker command
+-  docker compose up --build -d
+### Step 2: Access Dashboard
 Open the browser at:
-http://localhost:8501
-________________________________________
-6. Dashboard Features
-•	Date range filtering
-•	Product category filtering
-•	Revenue and order metrics
-•	Delivery performance indicators
-•	OLTP vs OLAP analytics comparison
+-   http://localhost:8501
+---
+## 6. Dashboard Features
+-	Date range filtering
+-	Product category filtering
+-	Revenue and order metrics
+-	Delivery performance indicators
+-	OLTP vs OLAP analytics comparison
 All filters update visualizations dynamically.
-________________________________________
-7. Stopping the Application
+---
+## 7. Stopping the Application
 To stop all running containers:
-docker compose down
-________________________________________
-
-
-8. Notes
-•	The application uses environment-based database connections.
-•	All SQL queries are optimized for analytical workloads.
-•	The dashboard is designed for extensibility in future phases.
-•	All members contributed equally to all the 3 Phase of this project from the design of the schema, ingestion logic, warehouse construction, dashboard development, and documentation.
-
+-   docker compose down
+---
+## 8. Notes
+-	The application uses environment-based database connections.
+-	All SQL queries are optimized for analytical workloads.
+-	The dashboard is designed for extensibility in future phases.
+-	All members contributed equally to all the 3 Phase of this project from the design of the schema, ingestion logic, warehouse construction, dashboard development, and documentation.
