@@ -12,46 +12,50 @@ ________________________________________
 ________________________________________
 3. Project Structure
 Phase3/
-├─ docker-compose.yml
-└─ app/
-   ├─ Dockerfile
-   ├─ requirements.txt
-   ├─ app.py
-   ├─ ingest.py
-   │
-   ├─ dataset/
-   │  ├─ olist_customers_dataset.csv
-   │  ├─ olist_geolocation_dataset.csv
-   │  ├─ olist_order_items_dataset.csv
-   │  ├─ olist_order_payments_dataset.csv
-   │  ├─ olist_order_reviews_dataset.csv
-   │  ├─ olist_orders_dataset.csv
-   │  ├─ olist_products_dataset.csv
-   │  ├─ olist_sellers_dataset.csv
-   │  └─ product_category_name_translation.csv
-   │
-   ├─ models/
-   │  ├─ run_all.sql
-   │  ├─ stg/
-   │  │  ├─ stg_customers.sql
-   │  │  ├─ stg_geolocation.sql              (if you created/need it)
-   │  │  ├─ stg_order_items.sql
-   │  │  ├─ stg_order_payments.sql
-   │  │  ├─ stg_order_reviews.sql
-   │  │  ├─ stg_orders.sql
-   │  │  ├─ stg_product_categories.sql
-   │  │  ├─ stg_products.sql
-   │  │  └─ stg_sellers.sql
-   │  ├─ dim/
-   │  │  ├─ dim_customer.sql
-   │  │  ├─ dim_date.sql
-   │  │  ├─ dim_product.sql
-   │  │  └─ dim_seller.sql
-   │  └─ fact/
-   │     └─ fact_sales.sql
-   │
-   └─ pages/
-      └─ 2_Delivery_SLA_Dashboard.py
+├── docker-compose.yml
+└── app/
+    ├── Dockerfile
+    ├── requirements.txt
+    ├── app.py                  # Main Streamlit application entry point
+    ├── ingest.py               # Data ingestion script (CSV → PostgreSQL staging)
+    │
+    ├── dataset/                # Raw Olist datasets
+    │   ├── olist_customers_dataset.csv
+    │   ├── olist_geolocation_dataset.csv
+    │   ├── olist_order_items_dataset.csv
+    │   ├── olist_order_payments_dataset.csv
+    │   ├── olist_order_reviews_dataset.csv
+    │   ├── olist_orders_dataset.csv
+    │   ├── olist_products_dataset.csv
+    │   ├── olist_sellers_dataset.csv
+    │   └── product_category_name_translation.csv
+    │
+    ├── models/                 # Database schema and warehouse logic
+    │   ├── run_all.sql         # Master script to build staging, dimensions, and facts
+    │   │
+    │   ├── stg/                # Staging layer SQL scripts
+    │   │   ├── stg_customers.sql
+    │   │   ├── stg_geolocation.sql
+    │   │   ├── stg_order_items.sql
+    │   │   ├── stg_order_payments.sql
+    │   │   ├── stg_order_reviews.sql
+    │   │   ├── stg_orders.sql
+    │   │   ├── stg_product_categories.sql
+    │   │   ├── stg_products.sql
+    │   │   └── stg_sellers.sql
+    │   │
+    │   ├── dim/                # Dimension tables
+    │   │   ├── dim_customer.sql
+    │   │   ├── dim_date.sql
+    │   │   ├── dim_product.sql
+    │   │   └── dim_seller.sql
+    │   │
+    │   └── fact/               # Fact tables
+    │       └── fact_sales.sql
+    │
+    └── pages/                  # Streamlit multipage dashboards
+        └── 2_Delivery_SLA_Dashboard.py
+
 ________________________________________
 4. Setup Instructions
 Step 1: It is the Install Prerequisites
